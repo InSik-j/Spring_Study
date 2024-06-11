@@ -25,7 +25,6 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
-
 //    @Autowired
 //    public SpringConfig(DataSource dataSource, EntityManager em) {
 //        this.dataSource = dataSource;
