@@ -60,10 +60,11 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
 
         return item;
     }
+
     @Override
     public void update(Long itemId, ItemUpdateDto updateParam) {
         String sql = "update item" +
-                " set item_name=:itemName, price=:price, quantity=quantity " +
+                " set item_name=:itemName, price=:price, quantity=:quantity " +
                 "where id=:id";
 
         SqlParameterSource param = new MapSqlParameterSource()
