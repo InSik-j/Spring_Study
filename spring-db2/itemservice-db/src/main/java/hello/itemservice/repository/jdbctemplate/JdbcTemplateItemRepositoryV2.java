@@ -48,7 +48,7 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
     @Override
     public Item save(Item item) {
         String sql = "insert into item (item_name, price, quantity) " +
-                "values (:itemName, :price, quantity)";
+                "values (:itemName, :price, :quantity)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(item);
         KeyHolder keyHolder = new GeneratedKeyHolder();
